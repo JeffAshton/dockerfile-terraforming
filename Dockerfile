@@ -11,4 +11,5 @@ RUN apk add --no-cache --update --virtual .build-deps \
     && bundle install -j4 --without test development --system \
     && apk del .build-deps
 
-CMD ["terraforming", "help"]
+ENTRYPOINT [ "terraforming" ]
+CMD [ "help" ]
